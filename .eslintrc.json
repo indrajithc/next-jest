@@ -170,7 +170,16 @@
   "settings": {
     "import/resolver": {
       "alias": {
-        "map": [],
+        "map": [
+          [
+            "@components",
+            "./src/components"
+          ],
+          [
+            "@app",
+            "./src"
+          ]
+        ],
         "extensions": [
           ".js",
           ".jsx"
