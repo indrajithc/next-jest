@@ -12,5 +12,8 @@
     "source.fixAll.eslint": true,
     "source.fixAll.format": true
   },
-  "workbench.colorTheme": "Community Material Theme"
+  "workbench.colorTheme": "Community Material Theme",
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
 }
