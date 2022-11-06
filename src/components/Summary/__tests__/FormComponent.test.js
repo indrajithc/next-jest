@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import FormComponent from "../components/FormComponent";
+import FormComponent from "@components/Summary/components/FormComponent";
 
 test("Initial conditions", () => {
   render(<FormComponent />);
@@ -10,7 +10,7 @@ test("Initial conditions", () => {
 
   const confirmButton = screen.getByRole("button", {
     name: /confirm order/i,
-  })
+  });
 
   expect(confirmButton).toBeDisabled();
 });
