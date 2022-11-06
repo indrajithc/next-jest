@@ -26,7 +26,8 @@ module.exports = {
       "<rootDir>/__mocks__/fileMock.js",
 
     // Handle module aliases
-    "^@/components/(.*)$": "<rootDir>/components/$1",
+    "^@app/(.*)$": "<rootDir>/src/$1",
+    "^@components/(.*)$": "<rootDir>/src/components/$1",
   },
   // Add more setup options before each test is run
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
