@@ -1,5 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import FormComponent from "@components/Summary/components/FormComponent";
+import "@testing-library/jest-dom";
 
 test("Initial conditions", () => {
   render(<FormComponent />);
