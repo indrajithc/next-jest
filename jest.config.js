@@ -41,4 +41,5 @@ module.exports = {
     "/node_modules/",
     "^.+\\.module\\.(css|sass|scss)$",
   ],
+  coveragePathIgnorePatterns: ["/node_modules/", ".*__snapshots__/.*"],
 };
