@@ -1,0 +1,26 @@
+{
+  "eslint.workingDirectories": [
+    "./"
+  ],
+  "eslint.options": {
+    "overrideConfigFile": "./.eslintrc.json"
+  },
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": [
+    "vue",
+    "html",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "json",
+    "scss"
+  ],
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "workbench.colorTheme": "Community Material Theme"
+}
