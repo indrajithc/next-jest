@@ -25,6 +25,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/react": "^18.0.25",
+    "babel-jest": "^29.2.2",
     "eslint": "^8.27.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "^13.0.2",
