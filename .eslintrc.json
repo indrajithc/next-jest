@@ -1,3 +1,155 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:react/recommended",
+    "plugin:json/recommended",
+    "airbnb"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "allowImportExportEverywhere": true,
+    "requireConfigFile": false
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "unused-imports"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "template-curly-spacing": "off",
+    "indent": "off",
+    "import/no-unresolved": [
+      "error",
+      {
+        "caseSensitive": false
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "packageDir": "."
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "import/prefer-default-export": "warn",
+    "react/forbid-prop-types": "warn",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 160
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "no-console": [
+      "warn",
+      {
+        "allow": [
+          "warn",
+          "error",
+          "info"
+        ]
+      }
+    ],
+    "no-underscore-dangle": [
+      "warn",
+      {
+        "allow": [
+          "_nextI18Next"
+        ]
+      }
+    ],
+    "no-empty": [
+      "error",
+      {
+        "allowEmptyCatch": true
+      }
+    ],
+    "consistent-return": [
+      "warn",
+      {
+        "treatUndefinedAsUnspecified": false
+      }
+    ],
+    "react/no-array-index-key": [
+      "warn"
+    ],
+    "jsx-a11y/anchor-is-valid": [
+      "warn",
+      {
+        "components": [
+          "Link",
+          "a"
+        ],
+        "aspects": [
+          "invalidHref",
+          "preferButton"
+        ]
+      }
+    ],
+    "no-eval": "warn",
+    "import/no-cycle": [
+      2,
+      {
+        "maxDepth": 1
+      }
+    ],
+    "class-methods-use-this": [
+      "error",
+      {
+        "enforceForClassFields": false
+      }
+    ],
+    "no-useless-escape": "warn",
+    "camelcase": "warn"
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [],
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    }
+  }
 }
