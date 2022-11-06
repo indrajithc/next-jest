@@ -2,9 +2,7 @@ export default function Home() {
   return (
     <div>
       <main>
-        <h1 role="presentation">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <h1 role="presentation">Welcome</h1>
       </main>
     </div>
   );
