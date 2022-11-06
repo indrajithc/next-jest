@@ -28,7 +28,8 @@
     "react",
     "react-hooks",
     "unused-imports",
-    "prettier"
+    "prettier",
+    "testing-library"
   ],
   "rules": {
     "prettier/prettier": [
@@ -149,6 +150,18 @@
     "no-useless-escape": "warn",
     "camelcase": "warn"
   },
+  "overrides": [
+    // Only uses Testing Library lint rules in test files
+    {
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "extends": [
+        "plugin:testing-library/react"
+      ]
+    }
+  ],
   "settings": {
     "import/resolver": {
       "alias": {
