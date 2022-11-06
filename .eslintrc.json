@@ -63,7 +63,11 @@
     "import/no-extraneous-dependencies": [
       "error",
       {
-        "packageDir": "."
+        "packageDir": ".",
+        "devDependencies": [
+          "**/*.test.js",
+          "**/*.spec.js"
+        ]
       }
     ],
     "react-hooks/rules-of-hooks": "error",
