@@ -6,15 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install"
   },
   "dependencies": {
     "bootstrap": "^5.2.2",
+    "lint-staged": "^13.0.3",
     "next": "13.0.2",
     "prop-types": "^15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "reactstrap": "^9.1.5"
+    "reactstrap": "^9.1.5",
+    "save-dev": "^0.0.1-security"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
@@ -30,6 +33,12 @@
     "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-unused-imports": "^2.0.0",
+    "husky": "^8.0.1",
     "prettier": "^2.7.1"
+  },
+  "lint-staged": {
+    "*.{ts,js,jsx,json,scss,css,html}": [
+      "eslint"
+    ]
   }
 }
