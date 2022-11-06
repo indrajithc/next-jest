@@ -7,7 +7,8 @@
     "next/core-web-vitals",
     "plugin:react/recommended",
     "plugin:json/recommended",
-    "airbnb"
+    "airbnb",
+    "prettier"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -26,9 +27,16 @@
   "plugins": [
     "react",
     "react-hooks",
-    "unused-imports"
+    "unused-imports",
+    "prettier"
   ],
   "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
     "react/react-in-jsx-scope": "off",
     "quotes": [
       "error",
