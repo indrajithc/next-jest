@@ -16,7 +16,7 @@ test("Initial conditions", () => {
   expect(confirmButton).toBeDisabled();
 });
 
-test("Checkobx enalbes button on first click and disables on second click", () => {
+test("Checkbox enables button on first click and disables on second click", () => {
   render(<FormComponent />);
   const checkbox = screen.getByRole("checkbox", {
     name: /terms and conditions/i,
