@@ -12,6 +12,7 @@
     "prettier"
   ],
   "globals": {
+    "React": "readonly",
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
@@ -78,7 +79,7 @@
     "import/prefer-default-export": "warn",
     "react/forbid-prop-types": "warn",
     "unused-imports/no-unused-vars": [
-      "warn",
+      "error",
       {
         "vars": "all",
         "varsIgnorePattern": "^_",
