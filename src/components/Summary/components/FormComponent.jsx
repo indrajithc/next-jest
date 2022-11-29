@@ -9,14 +9,26 @@
 // import propTypes from "prop-types";
 import { useState } from "react";
 
-import { Form, FormGroup, Input, Label, Button } from "reactstrap";
+import {
+  Form,
+  FormGroup,
+  Input,
+  Label,
+  Button,
+  Popover,
+  PopoverBody,
+} from "reactstrap";
 
 function FormComponent(props) {
   const [isTcChecked, setIsTcChecked] = useState(false);
+  const [popoverOpen, isPopoverOpen] = useState(false);
+
+  const toggle = () => isPopoverOpen((oS) => !oS);
+
   return (
     <Form>
       <FormGroup check>
-        <Label check>
+        <Label check id="tandc" onMouseEnter={toggle} onMouseLeave={toggle}>
           <Input
             type="checkbox"
             onChange={(e) => setIsTcChecked(e.target.checked)}
@@ -29,6 +41,19 @@ function FormComponent(props) {
           Confirm order
         </Button>
       </FormGroup>
+      <Popover
+        placement="bottom"
+        isOpen={popoverOpen}
+        target="tandc"
+        toggle={toggle}
+        trigger="hover"
+      >
+        {popoverOpen ? (
+          <PopoverBody>no ice cream will actually be delivered</PopoverBody>
+        ) : (
+          ""
+        )}
+      </Popover>
     </Form>
   );
 }
