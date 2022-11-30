@@ -61,6 +61,6 @@
     ]
   },
   "msw": {
-    "workerDirectory": "__mocks__/serviceWorker"
+    "workerDirectory": "public"
   }
 }
