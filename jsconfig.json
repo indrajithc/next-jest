@@ -9,6 +9,9 @@
       "@components/*": [
         "./components/*"
       ],
+      "@mocks/*": [
+        "./../__mocks__/*"
+      ],
     },
   },
   "exclude": [

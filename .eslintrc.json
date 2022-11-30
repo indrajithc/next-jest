@@ -68,7 +68,8 @@
         "packageDir": ".",
         "devDependencies": [
           "**/*.test.js",
-          "**/*.spec.js"
+          "**/*.spec.js",
+          "**/__mocks__/**"
         ]
       }
     ],
@@ -172,6 +173,10 @@
     "import/resolver": {
       "alias": {
         "map": [
+          [
+            "@mocks",
+            "./__mocks__"
+          ],
           [
             "@components",
             "./src/components"
