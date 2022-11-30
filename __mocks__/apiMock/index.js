@@ -6,7 +6,7 @@ export const setupMocks = async () => {
     mswWorker.start();
   } else {
     const { mswServer } = await import("./mswServer");
-    mswServer.start();
+    mswServer.listen();
   }
 };
 
