@@ -1,1 +1,3 @@
-export const handlers = [];
+import { scoopsHandlers } from "./api/scoops";
+
+export const handlers = [...scoopsHandlers];
