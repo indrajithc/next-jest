@@ -5,3 +5,17 @@
 // Learn more: https://github.com/testing-library/jest-dom
 // eslint-disable-next-line import/no-extraneous-dependencies
 import "@testing-library/jest-dom/extend-expect";
+
+import { mswServer } from "@mocks/apiMock/mswServer";
+
+beforeAll(() => {
+  mswServer.listen();
+});
+
+afterAll(() => {
+  mswServer.close();
+});
+
+afterEach(() => {
+  mswServer.resetHandlers();
+});
