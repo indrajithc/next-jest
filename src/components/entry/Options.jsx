@@ -11,6 +11,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 import ScoopOptionsComponent from "@components/entry/ScoopOptions";
+import ToppingOptionsComponent from "@components/entry/ToppingOptions";
 
 function OptionsComponent(props) {
   const { optionType } = props;
@@ -28,7 +29,8 @@ function OptionsComponent(props) {
       });
   }, [optionType]);
 
-  const ItemComponent = optionType === "scoops" ? ScoopOptionsComponent : null;
+  const ItemComponent =
+    optionType === "scoops" ? ScoopOptionsComponent : ToppingOptionsComponent;
 
   const optionItems = items.map((item) => (
     <ItemComponent
