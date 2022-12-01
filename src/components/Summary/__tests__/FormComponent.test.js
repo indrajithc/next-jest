@@ -17,7 +17,7 @@ test("Initial conditions", () => {
   expect(confirmButton).toBeDisabled();
 });
 
-test("Checkbox enables butto-n on first click and disables on second click", async () => {
+test("Checkbox enables button on first click and disables on second click", async () => {
   const user = userEvent.setup();
 
   render(<FormComponent />);
