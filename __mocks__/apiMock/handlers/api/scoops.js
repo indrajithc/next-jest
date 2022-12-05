@@ -1,7 +1,10 @@
 import { rest } from "msw";
 
+const host = "http://localhost:3030";
+const version = "/api/v1";
+
 export const scoopsHandlers = [
-  rest.get("http://localhost:3030/api/v1/scoops", (req, res, ctx) =>
+  rest.get(`${host}${version}/scoops`, (req, res, ctx) =>
     res(
       ctx.json([
         {
@@ -19,4 +22,7 @@ export const scoopsHandlers = [
   ),
 ];
 
-export const dummy = null;
+export const scoopsHandlerError500 = rest.get(
+  `${host}${version}/scoops`,
+  (req, res, ctx) => res(ctx.status(500))
+);

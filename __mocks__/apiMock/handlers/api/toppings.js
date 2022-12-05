@@ -1,7 +1,10 @@
 import { rest } from "msw";
 
+const host = "http://localhost:3030";
+const version = "/api/v1";
+
 export const toppingsHandlers = [
-  rest.get("http://localhost:3030/api/v1/toppings", (req, res, ctx) =>
+  rest.get(`${host}${version}/toppings`, (req, res, ctx) =>
     res(
       ctx.json([
         {
@@ -24,4 +27,7 @@ export const toppingsHandlers = [
   ),
 ];
 
-export const dummy = null;
+export const toppingsHandlerError500 = rest.get(
+  `${host}${version}/toppings`,
+  (req, res, ctx) => res(ctx.status(500))
+);
