@@ -13,9 +13,12 @@ import { useEffect, useState } from "react";
 import ScoopOptionsComponent from "@components/entry/ScoopOptions";
 import ToppingOptionsComponent from "@components/entry/ToppingOptions";
 
+import AlertBanner from "@components/common/AlertBanner";
+
 function OptionsComponent(props) {
   const { optionType } = props;
   const [items, setItems] = useState([]);
+  const [error, setErrors] = useState(false);
 
   useEffect(() => {
     axios
@@ -23,14 +26,17 @@ function OptionsComponent(props) {
       .then((response) => {
         setItems(response.data);
       })
-      .catch((error) => {
-        // todo handle error
-        console.error(error);
+      .catch((err) => {
+        setErrors(true);
+        // console.error(err);
       });
   }, [optionType]);
 
   const ItemComponent =
     optionType === "scoops" ? ScoopOptionsComponent : ToppingOptionsComponent;
+  if (error) {
+    return <AlertBanner />;
+  }
 
   const optionItems = items.map((item) => (
     <ItemComponent
