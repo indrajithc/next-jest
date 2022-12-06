@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@app/test-utils/testing-library-utils";
 import userEvent from "@testing-library/user-event";
 import Options from "@components/entry/Options";
 import "@testing-library/jest-dom";
@@ -8,7 +8,7 @@ test("Update scoop subtotal when scoops change", async () => {
   render(<Options optionType="scoops" />);
 
   // make sure total starts out $0.00
-  const scoopSubtotal = await screen.getByText("Scoops total: $", {
+  const scoopSubtotal = screen.getByText("Scoops total: $", {
     exact: false,
   });
   expect(scoopSubtotal).toHaveTextContent("0.00");
@@ -26,6 +26,6 @@ test("Update scoop subtotal when scoops change", async () => {
     name: "Chocolate",
   });
   await user.clear(chocolateInput);
-  await user.type(chocolateInput, 2);
-  expect(scoopSubtotal).toHaveTextContent("6.00");
+  await user.type(chocolateInput, "2");
+  expect(scoopSubtotal).toHaveTextContent("24.00");
 });
