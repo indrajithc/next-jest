@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen, waitFor } from "@app/test-utils/testing-library-utils";
 import "@testing-library/jest-dom";
 // import userEvent from "@testing-library/user-event";
 import { mswServer } from "@mocks/apiMock/mswServer";

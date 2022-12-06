@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@app/test-utils/testing-library-utils";
 import Options from "@components/entry/Options";
 import "@testing-library/jest-dom";
 // import userEvent from "@testing-library/user-event";
