@@ -67,8 +67,9 @@
       {
         "packageDir": ".",
         "devDependencies": [
-          "**/*.test.js",
-          "**/*.spec.js",
+          "**/*.test.[jt]s?(x)",
+          "**/*.spec.[jt]s?(x)",
+          "**/test-utils/**",
           "**/__mocks__/**"
         ]
       }
