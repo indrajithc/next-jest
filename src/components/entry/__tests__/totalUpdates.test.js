@@ -100,7 +100,7 @@ describe("grand total", () => {
       name: "Cherries",
     });
     await user.click(cherriesCheckbox);
-    const grandTotal = screen.getByRole("heading", { name: /Grand Total: \$/ });
+    const grandTotal = screen.getByRole("heading", { name: /Grand total: \$/ });
     expect(grandTotal).toHaveTextContent("1.50");
 
     // update vanilla scoops to 2 and check grand total
