@@ -3,7 +3,10 @@ import SummaryForm from "@components/Summary/components/FormComponent";
 import { useOrderDetails } from "@app/contexts/OrderDetails";
 import { formatCurrency } from "@app/utilities";
 
-export default function OrderSummary() {
+import PropTypes from "prop-types";
+
+export default function OrderSummary(props) {
+  const { setOrderPhase } = props;
   const { totals, optionCounts } = useOrderDetails();
 
   const scoopArray = Object.entries(optionCounts.scoops);
@@ -22,12 +25,16 @@ export default function OrderSummary() {
 
   return (
     <div>
-      <h1>OrderSummary</h1>
+      <h1>Order Summary</h1>
       <h2>Scoops: {formatCurrency(totals.scoops)}</h2>
       <ul>{scoopList}</ul>
       <h2>Toppings: {formatCurrency(totals.toppings)}</h2>
       <ul>{toppingList}</ul>
-      <SummaryForm />
+      <SummaryForm setOrderPhase={setOrderPhase} />
     </div>
   );
 }
+
+OrderSummary.propTypes = {
+  setOrderPhase: PropTypes.func.isRequired,
+};

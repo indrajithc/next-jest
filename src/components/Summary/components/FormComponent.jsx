@@ -6,7 +6,6 @@
  * @author Indrajith C
  */
 
-// import propTypes from "prop-types";
 import { useState } from "react";
 
 import {
@@ -18,15 +17,25 @@ import {
   Popover,
   PopoverBody,
 } from "reactstrap";
+import PropTypes from "prop-types";
 
 function FormComponent(props) {
+  const { setOrderPhase } = props;
   const [isTcChecked, setIsTcChecked] = useState(false);
   const [popoverOpen, isPopoverOpen] = useState(false);
 
   const toggle = () => isPopoverOpen((oS) => !oS);
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // pass along to the next phase.
+    // The next page will handle submitting order from context.
+    setOrderPhase("completed");
+  };
+
   return (
-    <Form>
+    <Form onSubmit={handleSubmit}>
       <FormGroup check>
         <Label check id="tandc" onMouseEnter={toggle} onMouseLeave={toggle}>
           <Input
@@ -58,6 +67,12 @@ function FormComponent(props) {
   );
 }
 
-FormComponent.propTypes = {};
+FormComponent.defaultProps = {
+  setOrderPhase: () => { },
+};
+
+FormComponent.propTypes = {
+  setOrderPhase: PropTypes.func,
+};
 
 export default FormComponent;
