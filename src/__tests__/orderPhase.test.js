@@ -40,7 +40,7 @@ test("order phases for happy path", async () => {
   });
   expect(summaryHeading).toBeInTheDocument();
 
-  const scoopsHeading = screen.getByRole("heading", { name: "Scoops: $6.00" });
+  const scoopsHeading = screen.getByRole("heading", { name: "Scoops: $24.00" });
   expect(scoopsHeading).toBeInTheDocument();
 
   const toppingsHeading = screen.getByRole("heading", {
@@ -51,7 +51,7 @@ test("order phases for happy path", async () => {
   // check summary option items
   expect(screen.getByText("1 Vanilla")).toBeInTheDocument();
   expect(screen.getByText("2 Chocolate")).toBeInTheDocument();
-  expect(screen.getByText("Cherries")).toBeInTheDocument();
+  expect(screen.getByText("1 Cherries")).toBeInTheDocument();
 
   // / aleternativley ....
   // // const optionItems = screen.getAllByRole("listitem");
