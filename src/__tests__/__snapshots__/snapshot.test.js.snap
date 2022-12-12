@@ -9,6 +9,47 @@ exports[`renders homepage unchanged 1`] = `
       >
         Welcome
       </h1>
+      <div>
+        <h1>
+          Design your Sundae!
+        </h1>
+        <h2>
+          Scoops
+        </h2>
+        <p>
+          $2.00
+           each
+        </p>
+        <p>
+          Scoops
+           total: 
+          $0.00
+        </p>
+        <div />
+        <h2>
+          Toppings
+        </h2>
+        <p>
+          $1.50
+           each
+        </p>
+        <p>
+          Toppings
+           total: 
+          $0.00
+        </p>
+        <div />
+        <h2>
+          Grand total: 
+          $0.00
+        </h2>
+        <button
+          class="btn btn-secondary"
+          type="button"
+        >
+          Order Sundae!
+        </button>
+      </div>
     </main>
   </div>
 </div>
